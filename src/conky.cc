@@ -907,6 +907,7 @@ void update_text_area() {
   if (own_window.get(*state) && (fixed_pos == 0)) {
     int border_total = get_border_total();
     text_start = conky::vec2i::uniform(border_total);
+    text_start.set_y(text_start.x());
     window.geometry.set_pos(xy - text_start);
   } else
 #endif

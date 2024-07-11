@@ -277,6 +277,7 @@ bool display_output_x11::main_loop_wait(double t) {
   }
 
   vec2i border_total = vec2i::uniform(get_border_total());
+  border_total.set_y(border_total.x());
   if (need_to_update != 0) {
 #ifdef OWN_WINDOW
     auto old_pos = window.geometry.pos();
